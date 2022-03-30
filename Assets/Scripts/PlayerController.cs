@@ -9,8 +9,8 @@ public class PlayerController : MonoBehaviour
     private GameInputActions _inputActions;
     private Rigidbody2D _rigidbody;
     [SerializeField] private float jumpHeight;
-    private bool isJumping = false;
-    private AudioSource audioData;
+ 
+ 
     
     
     private Vector2 _facingVector = Vector2.right;
@@ -21,7 +21,6 @@ public class PlayerController : MonoBehaviour
         _inputActions = new GameInputActions();
         _inputActions.Player.Enable();
         _rigidbody = GetComponent<Rigidbody2D>();
-         audioData = GetComponent<AudioSource>();
         //transform.position = new Vector2(3, -1);
         //Invoke(nameof(AcceptDefeat), 10);
     }
@@ -31,9 +30,7 @@ public class PlayerController : MonoBehaviour
         if (_inputActions.Player.Fire.WasPerformedThisFrame())
         {
            
-            audioData.Play(2);
-            var crewmate = Instantiate(crewmatePrefab, transform.position, Quaternion.identity);
-            crewmate.GetComponent<BallController>()?.SetDirection(-_facingVector);
+           
         }
     }
    
