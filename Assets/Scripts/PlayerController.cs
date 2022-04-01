@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -23,6 +24,7 @@ public class PlayerController : MonoBehaviour
         _inputActions = new GameInputActions();
         _inputActions.Player.Enable();
         _rigidbody = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
         //transform.position = new Vector2(3, -1);
         //Invoke(nameof(AcceptDefeat), 10);
     }
@@ -46,13 +48,14 @@ public class PlayerController : MonoBehaviour
         if (dir.magnitude > 0.5)
         {
             _facingVector = dir;
-            _animator.Play("Player Idle");
+            _animator.Play("Player Run");
         }
 
-        else if 
+        else
 
         {
-            _animator.Play("Player Run");
+            
+            _animator.Play("Player Idle");
         }
     }
 
