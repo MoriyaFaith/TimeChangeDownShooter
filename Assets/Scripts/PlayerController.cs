@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     private GameInputActions _inputActions;
     private Rigidbody2D _rigidbody;
     [SerializeField] private float jumpHeight;
+    private Animator _animator;
+    
  
  
     
@@ -33,21 +35,29 @@ public class PlayerController : MonoBehaviour
            
         }
     }
-   
-       
+
+
     private void FixedUpdate()
     {
-         var dir = _inputActions.Player.Move.ReadValue<Vector2>();
-        _rigidbody.velocity = dir * 5;
+
+        var dir = _inputActions.Player.Move.ReadValue<Vector2>();
+        _rigidbody.velocity = dir * 6;
 
         if (dir.magnitude > 0.5)
         {
             _facingVector = dir;
+            _animator.Play("Player Idle");
         }
-       
-        } 
-    
-          private void AcceptDefeat()
+
+        else if 
+
+        {
+            _animator.Play("Player Run");
+        }
+    }
+
+
+    private void AcceptDefeat()
             {
                  Destroy(gameObject);
             }
