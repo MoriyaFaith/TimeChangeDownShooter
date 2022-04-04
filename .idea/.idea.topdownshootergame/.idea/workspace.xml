@@ -14,7 +14,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/OneDrive - Finger Lakes Community College/Documents/Unity Projects for Game Design/Assignment-Prototype/Assets/Scripts/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/OneDrive - Finger Lakes Community College/Documents/Unity Projects for Game Design/Assignment-Prototype/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="276pEcdmxdL94zvcdAcwFddCaFM" />
   <component name="ProjectViewState">
@@ -65,6 +66,7 @@
       <updated>1648650280139</updated>
       <workItem from="1648650285195" duration="1057000" />
       <workItem from="1648821915925" duration="2978000" />
+      <workItem from="1649082578894" duration="1235000" />
     </task>
     <servers />
   </component>
