@@ -4,24 +4,28 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
- 
- public Transform firePoint;
- public GameObject bulletPrefab;
+    [SerializeField] float _speed = 15f;
+    [SerializeField] float _lifeTime = 3;
+    [SerializeField] private int damage = 5;
+    [SerializeField] private string tagToDamage;
 
- public float bulletForce = 20f;
+    public void SetDirection(Vector2 direction)
+    {
+        direction = direction.normalized;
+        GetComponent<Rigidbody2D>().velocity = direction * -_speed;
+        Invoke(nameof(Vanish), _lifeTime);
+    }
 
- void Update()
- {
-  if (Input.GetButtonDown("Fire1"));
-  {
-      Shoot();
-  }
-  }
+    private void Vanish()
+    {
+        Destroy(gameObject);
+    }
 
- void Shoot()
- {
-     Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-     Rigidbody2D rb = GetComponent<Rigidbody2D>();
-     rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
- }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.transform.CompareTag(tagToDamage))
+        {
+            other.transform.GetComponent<HealthSystem>()?.Damage(damage);
+        }
+    }
 }
