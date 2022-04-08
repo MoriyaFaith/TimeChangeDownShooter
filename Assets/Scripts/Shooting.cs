@@ -8,6 +8,7 @@ public class Shooting : MonoBehaviour
     [SerializeField] float _lifeTime = 3;
     [SerializeField] private int damage = 5;
     [SerializeField] private string tagToDamage;
+    [SerializeField] private Transform firepoint;
 
     public void SetDirection(Vector2 direction)
     {

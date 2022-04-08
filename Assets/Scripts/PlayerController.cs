@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public GameObject crewmatePrefab;
+    public GameObject BulletPrefab;
     private GameInputActions _inputActions;
     private Rigidbody2D _rigidbody;
     [SerializeField] private float jumpHeight;
@@ -33,8 +33,16 @@ public class PlayerController : MonoBehaviour
     {
         if (_inputActions.Player.Fire.WasPerformedThisFrame())
         {
+            
+            
+            var ball = Instantiate(BulletPrefab, 
+                transform.position,
+                Quaternion.identity);
+            //Get the Rigidbody 2D component from the new ball 
+            //and set its velocity to x:-10f, y:0, z:0
+            ball.GetComponent<Shooting>()?.SetDirection(_facingVector);
            
-           
+
         }
     }
 
