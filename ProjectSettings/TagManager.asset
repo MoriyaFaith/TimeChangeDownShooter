@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Teleporter
   - Enemy
+  - Player Projectile
   layers:
   - Default
   - TransparentFX
@@ -14,8 +15,8 @@ TagManager:
   - Water
   - UI
   - Enemy
-  - 
-  - 
+  - Projectile
+  - Pojectile_Enemy
   - 
   - 
   - 
