@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 264926514251584710}
   - component: {fileID: 264926514251584709}
   - component: {fileID: -6824332504387630440}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Player Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,3 +150,4 @@ MonoBehaviour:
   _lifeTime: 3
   damage: 5
   tagToDamage: Enemy
+  firepoint: {fileID: 0}

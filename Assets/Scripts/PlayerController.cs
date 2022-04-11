@@ -11,11 +11,6 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rigidbody;
     [SerializeField] private float jumpHeight;
     private Animator _animator;
-    
- 
- 
-    
-    
     private Vector2 _facingVector = Vector2.right;
     
     // Start is called before the first frame update
@@ -33,8 +28,6 @@ public class PlayerController : MonoBehaviour
     {
         if (_inputActions.Player.Fire.WasPerformedThisFrame())
         {
-            
-            
             var ball = Instantiate(BulletPrefab, 
                 transform.position,
                 Quaternion.identity);
