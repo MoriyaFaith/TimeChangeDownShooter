@@ -148,6 +148,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 15
   _lifeTime: 3
-  damage: 5
+  damage: 2
   tagToDamage: Enemy
   firepoint: {fileID: 0}

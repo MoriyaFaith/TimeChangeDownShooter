@@ -10,6 +10,7 @@ public class HealthSystem : MonoBehaviour
 
     [SerializeField] private UnityEvent OnDamaged;
     [SerializeField] private UnityEvent OnZero;
+    [SerializeField] private UnityEvent XDeathState; //Gibs
     
     
     public void Damage(int hpAmount)
@@ -19,7 +20,11 @@ public class HealthSystem : MonoBehaviour
         
         OnDamaged?.Invoke();
 
-        if (hp <= 0)
+        if (hp <= -maxHp) //gibs?
+        {
+            XDeathState?.Invoke();
+        }
+        else if (hp <= 0)
         {
             OnZero?.Invoke();
         }
