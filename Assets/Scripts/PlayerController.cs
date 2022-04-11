@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
 
 
     private void AcceptDefeat()
-            {
-                 Destroy(gameObject);
-            }
+    {
+        Destroy(gameObject);
+    }
     }
