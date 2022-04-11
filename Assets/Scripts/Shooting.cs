@@ -9,11 +9,15 @@ public class Shooting : MonoBehaviour
     [SerializeField] private int damage = 5;
     [SerializeField] private string tagToDamage;
     [SerializeField] private Transform firepoint;
+    private float dir;
 
-    public void SetDirection(Vector2 direction)
+    public void SetDirection(Vector2 unused)
     {
-        direction = direction.normalized;
-        GetComponent<Rigidbody2D>().velocity = direction * -_speed;
+        var dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+        var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        dir = dir.normalized;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        GetComponent<Rigidbody2D>().velocity = dir * _speed;
         Invoke(nameof(Vanish), _lifeTime);
     }
 
