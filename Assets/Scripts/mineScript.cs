@@ -14,6 +14,7 @@ public class mineScript : MonoBehaviour
 
     public LayerMask LayerToHit;
     public GameObject ExplosionEffect;
+    [SerializeField] private int damage = 10000; //just fucking kill them
 
     // Update is called once per frame
 
@@ -32,12 +33,13 @@ public class mineScript : MonoBehaviour
         foreach (Collider2D obj in objects)
         {
             Vector2 direction = obj.transform.position - transform.position;
-            
             obj.GetComponent<Rigidbody2D>().AddForce(direction * force);
+            obj.GetComponent<HealthSystem>()?.Damage(damage);
         }
 
         GameObject ExplosionEffectIns = Instantiate(ExplosionEffect, transform.position, Quaternion.identity);
         Destroy(ExplosionEffectIns,10);
+        Destroy(gameObject);
     }
 
     private void OnDrawGizmosSelected()

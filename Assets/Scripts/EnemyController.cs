@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
 {
     [SerializeField] private float patrolDelay = 1.5f;
     [SerializeField] private float patrolSpeed = 3;
+    [SerializeField] private int contactDamage = 3;
     private Rigidbody2D _rigidbody;
     private Vector2 _direction = Vector2.right;
     private Vector2 _patrolTargetPosition;
@@ -75,7 +76,7 @@ public class EnemyController : MonoBehaviour
     {
         if (other.transform.CompareTag("Player"))
         {
-            other.transform.GetComponent<HealthSystem>()?.Damage(3);
+            other.transform.GetComponent<HealthSystem>()?.Damage(contactDamage);
         }
     }
     

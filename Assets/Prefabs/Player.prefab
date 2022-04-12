@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7171755510077939257}
   - component: {fileID: 7171755510077939258}
   - component: {fileID: 7171755510077939256}
+  - component: {fileID: 4108162954692917785}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -217,6 +218,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c56d543db862ec840bac73336c928aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4108162954692917785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7171755510077939244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28f6a0e8b7a34384b9d01cb8816e2645, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 50
+  hp: 50
+  OnDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnZero:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7171755510077939257}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: AcceptDefeat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  XDeathState:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7171755510077939257}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: AcceptDefeat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7171755510724337654
 GameObject:
   m_ObjectHideFlags: 0
