@@ -15,8 +15,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy AI/EnemyMove.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy AI/EnemyDetection.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DamagePopup.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -71,7 +71,7 @@
       <updated>1648785101792</updated>
       <workItem from="1648785101825" duration="1551000" />
       <workItem from="1649686361240" duration="2008000" />
-      <workItem from="1649857229621" duration="831000" />
+      <workItem from="1649857229621" duration="1967000" />
     </task>
     <servers />
   </component>
