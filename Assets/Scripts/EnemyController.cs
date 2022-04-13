@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
 {
     [SerializeField] private float patrolDelay = 1.5f;
     [SerializeField] private float patrolSpeed = 3;
+    [SerializeField] private int contactDamage = 3;
     private Rigidbody2D _rigidbody;
     private Vector2 _direction = Vector2.right;
     private Vector2 _patrolTargetPosition;
@@ -46,6 +47,13 @@ public class EnemyController : MonoBehaviour
         yield break;
     }
     
+    void Update()
+    {
+        var dir = _rigidbody.velocity;
+        var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+    }
+    
     private void FixedUpdate()
     {
         if (!_waypointPath) return;
@@ -68,7 +76,7 @@ public class EnemyController : MonoBehaviour
     {
         if (other.transform.CompareTag("Player"))
         {
-            other.transform.GetComponent<HealthSystem>()?.Damage(3);
+            other.transform.GetComponent<HealthSystem>()?.Damage(contactDamage);
         }
     }
     

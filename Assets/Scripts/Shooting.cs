@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,5 +33,12 @@ public class Shooting : MonoBehaviour
         {
             other.transform.GetComponent<HealthSystem>()?.Damage(damage);
         }
+        Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        //create a smoke puff to signify the object being destroyed
+        throw new NotImplementedException();
     }
 }

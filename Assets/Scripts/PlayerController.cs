@@ -23,6 +23,12 @@ public class PlayerController : MonoBehaviour
         //transform.position = new Vector2(3, -1);
         //Invoke(nameof(AcceptDefeat), 10);
     }
+
+    public void AcceptDefeat()
+    {
+        Destroy(gameObject);
+    }
+    
     // Update is called once per frame
     void Update()
     {
@@ -38,7 +44,6 @@ public class PlayerController : MonoBehaviour
 
         }
     }
-
 
     private void FixedUpdate()
     {
@@ -59,10 +64,4 @@ public class PlayerController : MonoBehaviour
             _animator.Play("Player Idle");
         }
     }
-
-
-    private void AcceptDefeat()
-    {
-        Destroy(gameObject);
-    }
-    }
+}   
