@@ -18,6 +18,14 @@ public class PlayerController : MonoBehaviour
     
     
     // Start is called before the first frame update
+    
+    void Awake() {
+    inventory = new Inventory();
+            uiInventory.SetInventory(inventory);
+    
+    }
+    
+    
     void Start()
     {
         _inputActions = new GameInputActions();
@@ -48,8 +56,7 @@ public class PlayerController : MonoBehaviour
 
         }
 
-        inventory = new Inventory();
-        uiInventory.SetInventory(inventory);
+        
     }
 
     private void FixedUpdate()
