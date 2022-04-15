@@ -10,8 +10,12 @@ public class PlayerController : MonoBehaviour
     private GameInputActions _inputActions;
     private Rigidbody2D _rigidbody;
     [SerializeField] private float jumpHeight;
+    [SerializeField] private UI_Inventory uiInventory;
+    
     private Animator _animator;
     private Vector2 _facingVector = Vector2.right;
+    private Inventory inventory;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -43,6 +47,9 @@ public class PlayerController : MonoBehaviour
            
 
         }
+
+        inventory = new Inventory();
+        uiInventory.SetInventory(inventory);
     }
 
     private void FixedUpdate()
