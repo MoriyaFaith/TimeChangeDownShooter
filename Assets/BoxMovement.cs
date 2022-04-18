@@ -8,16 +8,24 @@ public class BoxMovement : MonoBehaviour
     [SerializeField] private int pushSpeed = 5;
     [SerializeField] private bool touchingPlayer;
     [SerializeField] private string tagToPush;
+    private Rigidbody2D _rigidbody;
 
-    private void OnCollisionEnter(Collision other)
+
+    void Awake()
+    {
+        _rigidbody = GetComponent<Rigidbody2D>();
+    }
+
+    private void OnCollisionEnter2D(Collision other)
     {
         if (other.transform.CompareTag(tagToPush))
         {
             touchingPlayer = true;
+            _rigidbody.velocity = new Vector2(500, 500);
         }
     }
 
-    private void OnCollisionExit(Collision other)
+    private void OnCollisionExit2D(Collision other)
     {
         if (other.transform.CompareTag(tagToPush))
         {
