@@ -15,8 +15,8 @@ public class PlayerController : MonoBehaviour
     private Animator _animator;
     private Vector2 _facingVector = Vector2.right;
     private Inventory inventory;
-    
-    
+
+
     // Start is called before the first frame update
     
     void Awake() {
