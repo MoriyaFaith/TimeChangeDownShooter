@@ -7,6 +7,7 @@ TagManager:
   - Teleporter
   - Enemy
   - Player Projectile
+  - Keycard
   layers:
   - Default
   - TransparentFX

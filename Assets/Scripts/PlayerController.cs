@@ -15,9 +15,17 @@ public class PlayerController : MonoBehaviour
     private Animator _animator;
     private Vector2 _facingVector = Vector2.right;
     private Inventory inventory;
-    
-    
+
+
     // Start is called before the first frame update
+    
+    void Awake() {
+    inventory = new Inventory();
+            uiInventory.SetInventory(inventory);
+    
+    }
+    
+    
     void Start()
     {
         _inputActions = new GameInputActions();
@@ -48,8 +56,7 @@ public class PlayerController : MonoBehaviour
 
         }
 
-        inventory = new Inventory();
-        uiInventory.SetInventory(inventory);
+        
     }
 
     private void FixedUpdate()
