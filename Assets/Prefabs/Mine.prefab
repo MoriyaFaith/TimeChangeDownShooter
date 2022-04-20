@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7718639891373996261}
   - component: {fileID: 7718639891373996263}
   - component: {fileID: -3319663847573273498}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,6 +146,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   ExplosionEffect: {fileID: 2190092390308304114, guid: 6e1e11e9777c0f54994b5b00f98ce1ee, type: 3}
+  damage: 10000
 --- !u!198 &7718639891373996260
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4957,6 +4958,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  XDeathState:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!95 &-3319663847573273498
 Animator:
   serializedVersion: 4
