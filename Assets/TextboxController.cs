@@ -13,10 +13,10 @@ public class TextboxController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         _text.text = "BRUH";
-    }
+    }*/
     
     public void UpdateText(System.String content)
     {
