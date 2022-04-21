@@ -11,6 +11,7 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] private UnityEvent OnDamaged;
     [SerializeField] private UnityEvent OnZero;
     [SerializeField] private UnityEvent XDeathState; //Gibs
+    public AudioSource dieSound;
     
     
     public void Damage(int hpAmount)
@@ -27,6 +28,7 @@ public class HealthSystem : MonoBehaviour
         else if (hp <= 0)
         {
             OnZero?.Invoke();
+            dieSound.Play();
         }
     }
     // Start is called before the first frame update

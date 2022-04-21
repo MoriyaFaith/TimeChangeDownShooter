@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     private Animator _animator;
     private Vector2 _facingVector = Vector2.right;
     private Inventory inventory;
+    public AudioSource dieSound;
+    public AudioSource shootSound;
 
 
     // Start is called before the first frame update
@@ -38,6 +40,7 @@ public class PlayerController : MonoBehaviour
 
     public void AcceptDefeat()
     {
+        dieSound.Play();
         Destroy(gameObject);
     }
     
@@ -46,6 +49,7 @@ public class PlayerController : MonoBehaviour
     {
         if (_inputActions.Player.Fire.WasPerformedThisFrame())
         {
+            shootSound.Play();
             var ball = Instantiate(BulletPrefab, 
                 transform.position,
                 Quaternion.identity);

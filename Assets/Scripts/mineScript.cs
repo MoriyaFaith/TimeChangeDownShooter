@@ -14,6 +14,7 @@ public class mineScript : MonoBehaviour
 
     public LayerMask LayerToHit;
     public GameObject ExplosionEffect;
+    public AudioSource boomSound;
     [SerializeField] private int damage = 10000; //just fucking kill them
 
     // Update is called once per frame
@@ -40,6 +41,7 @@ public class mineScript : MonoBehaviour
         GameObject ExplosionEffectIns = Instantiate(ExplosionEffect, transform.position, Quaternion.identity);
         Destroy(ExplosionEffectIns,10);
         Destroy(gameObject);
+        boomSound.Play();
     }
 
     private void OnDrawGizmosSelected()
