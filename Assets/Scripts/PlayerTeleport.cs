@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerTeleport : MonoBehaviour
 {
     private GameObject currentTeleporter;
+    public AudioSource warpSound;
 
     void Update()
     {
@@ -11,6 +12,7 @@ public class PlayerTeleport : MonoBehaviour
             Debug.Log("Teleport");
             if (currentTeleporter != null)
             {
+                warpSound.Play();
                 transform.position = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;
             }
         }
