@@ -26326,7 +26326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5952493233399524713, guid: 296b755da67666d4ab2eb41869c7fbb9, type: 3}
       propertyPath: TextToDisplay
-      value: A notice about land mines. Who the fuck left all these out?
+      value: A notice about land mines. Who left all these out?
       objectReference: {fileID: 0}
     - target: {fileID: 5952493233399524713, guid: 296b755da67666d4ab2eb41869c7fbb9, type: 3}
       propertyPath: TextboxHandler
@@ -46081,7 +46081,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3048301609287934751, guid: a0e94f589203cba4cb1ce75769d5b994, type: 3}
       propertyPath: TextToDisplay
-      value: '"Walk up to signs to read them!" No shit, Sherlock.'
+      value: '"Walk up to signs to read them!"'
       objectReference: {fileID: 0}
     - target: {fileID: 3048301609287934751, guid: a0e94f589203cba4cb1ce75769d5b994, type: 3}
       propertyPath: TextboxHandler
@@ -47930,7 +47930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72332081caadf384391e2c81b89de0c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextToDisplay: A notice about land mines. Who the fuck left all these out?
+  TextToDisplay: A notice about land mines. Who left all these out?
   TextboxHandler: {fileID: 1993445039}
 --- !u!212 &1820241483
 SpriteRenderer:
