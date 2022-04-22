@@ -46822,7 +46822,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8514644, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -48825,7 +48825,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!1001 &1989090875769277096
 PrefabInstance:
@@ -49170,7 +49170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletPrefab: {fileID: 264926514251584705, guid: 09ffb9b4ae9265d4080adcf3307aa957, type: 3}
   jumpHeight: 0
-  uiInventory: {fileID: 317070925}
+  uiInventory: {fileID: 0}
   dieSound: {fileID: 64408695}
   shootSound: {fileID: 520722510}
 --- !u!114 &7171755511713040106
