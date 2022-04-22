@@ -78,8 +78,10 @@ public class PlayerController : MonoBehaviour
         else
 
         {
-            
-            _animator.Play("Player Idle");
+            if (_animator.name == "Player Start")
+            {
+                //do nothing
+            }else  _animator.Play("Player Idle");
         }
     }
 }   
