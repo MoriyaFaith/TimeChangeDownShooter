@@ -29,7 +29,14 @@ public class HealthSystem : MonoBehaviour
         {
             OnZero?.Invoke();
             dieSound.Play();
+            PlayerDied();
         }
+    }
+
+    private void PlayerDied()
+    {
+        LevelManager.instance.GameOver();
+        gameObject.SetActive(false);
     }
     // Start is called before the first frame update
     void Start()
