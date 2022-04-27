@@ -17,6 +17,9 @@ public class PlayerController : MonoBehaviour
     private Inventory inventory;
     public AudioSource dieSound;
     public AudioSource shootSound;
+    
+    private AnimatorClipInfo[] _animatorinfo;
+    private string current_animation;
 
 
     // Start is called before the first frame update
@@ -59,27 +62,21 @@ public class PlayerController : MonoBehaviour
            
 
         }
+        
+        _animatorinfo = this._animator.GetCurrentAnimatorClipInfo(0);
+        current_animation = _animatorinfo[0].clip.name;
 
         
     }
 
     private void FixedUpdate()
     {
-
-        var dir = _inputActions.Player.Move.ReadValue<Vector2>();
-        _rigidbody.velocity = dir * 6;
-
-        if (dir.magnitude > 0.5)
+        if (current_animation != "Player Intro")
         {
-            _facingVector = dir;
-            _animator.Play("Player Run");
+            var dir = _inputActions.Player.Move.ReadValue<Vector2>();
+            _rigidbody.velocity = dir * 6;
         }
-
-        else
-
-        {
-            
-            _animator.Play("Player Idle");
-        }
+        
+        _animator.SetFloat("Velocity",_rigidbody.velocity.magnitude);
     }
 }   
