@@ -14,7 +14,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Item.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -78,6 +77,7 @@
       <workItem from="1650896381589" duration="1659000" />
       <workItem from="1651070023784" duration="9000" />
       <workItem from="1651070432672" duration="4000" />
+      <workItem from="1651674058179" duration="1344000" />
     </task>
     <servers />
   </component>
