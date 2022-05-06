@@ -13,15 +13,15 @@ private void Update()
 {
   if (life < 1)
   {
-     Destroy(hearts[1].gameObject);
+     Destroy(hearts[0].gameObject);
   }
   else if (life < 2)
   {
-     Destroy(hearts[2].gameObject);
+     Destroy(hearts[1].gameObject);
   }
   else if (life< 3)
   {
-   Destroy(hearts[3].gameObject);  
+   Destroy(hearts[2].gameObject);  
       
 }
 

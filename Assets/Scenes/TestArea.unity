@@ -42117,8 +42117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f6a0e8b7a34384b9d01cb8816e2645, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 5
-  hp: 5
+  maxHp: 4
+  hp: 4
   OnDamaged:
     m_PersistentCalls:
       m_Calls:
