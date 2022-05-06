@@ -7,6 +7,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public GameObject BulletPrefab;
+    public GameObject DeathPrefab;
     private GameInputActions _inputActions;
     private Rigidbody2D _rigidbody;
     [SerializeField] private float jumpHeight;
@@ -44,6 +45,7 @@ public class PlayerController : MonoBehaviour
     public void AcceptDefeat()
     {
         dieSound.Play();
+        Instantiate(DeathPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
     
