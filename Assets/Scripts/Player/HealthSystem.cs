@@ -12,6 +12,10 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] private UnityEvent OnZero;
     [SerializeField] private UnityEvent XDeathState; //Gibs
     public AudioSource dieSound;
+    private Animator _animator;
+    private AnimatorClipInfo[] _animatorinfo;
+    private string current_animation;
+   
     
     
     public void Damage(int hpAmount)
@@ -30,6 +34,8 @@ public class HealthSystem : MonoBehaviour
             OnZero?.Invoke();
             dieSound.Play();
             PlayerDied();
+
+           
         }
     }
 
