@@ -39386,7 +39386,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 2.1411765, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -42279,7 +42279,7 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -42398,6 +42398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BulletPrefab: {fileID: 264926514251584705, guid: 09ffb9b4ae9265d4080adcf3307aa957, type: 3}
+  DeathPrefab: {fileID: 1728729234036287503, guid: 905acda4220f4b44b9e83707d225623f, type: 3}
   jumpHeight: 0
   uiInventory: {fileID: 317070925}
   dieSound: {fileID: 64408695}

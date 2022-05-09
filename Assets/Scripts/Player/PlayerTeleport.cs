@@ -2,12 +2,19 @@ using UnityEngine;
 
 public class PlayerTeleport : MonoBehaviour
 {
+    private GameInputActions _inputActions;
     private GameObject currentTeleporter;
     public AudioSource warpSound;
 
+    void Start()
+    {
+        _inputActions = new GameInputActions();
+        _inputActions.Player.Enable();
+    }
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (_inputActions.Player.Use.WasPerformedThisFrame())
         {
             Debug.Log("Teleport");
             if (currentTeleporter != null)
